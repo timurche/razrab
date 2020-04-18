@@ -19,5 +19,3 @@ var appData = {
     savings: false,
 
 }
-console.log(appData.expenses);
-alert("ваш бджет = " + money/30)
