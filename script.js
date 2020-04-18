@@ -19,3 +19,9 @@ var appData = {
     savings: false,
 
 }
+<<<<<<< HEAD
+=======
+console.log(appData.expenses);
+alert("ваш бджет = " + money/30)
+0
+>>>>>>> 0034db10e66334a8fe1cdacab62b2b00b50ef9d0
