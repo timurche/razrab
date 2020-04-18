@@ -21,3 +21,4 @@ var appData = {
 }
 console.log(appData.expenses);
 alert("ваш бджет = " + money/30)
+0
