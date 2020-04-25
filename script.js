@@ -1,27 +1,33 @@
 'use strict';
 
-var money = prompt("Ваш бюджет на месяц?");
+var money = +prompt("Ваш бюджет на месяц?");
 var time = new Date(prompt("Введите дату в формате YYYY-MM-DD"));
-console.log(money, time)
-var firstQuest = prompt("Введите обязательную статью расходов в этом месяце");
-var secondQuest = prompt("Во сколько обойдется?");
-var firstQuest1 = prompt("Введите обязательную статью расходов в этом месяце");
-var secondQuest1 = prompt("Во сколько обойдется?");
+
 var appData = {
-    money, 
+    budget: money, 
     timeData: time,
-    expenses: {
-        [firstQuest]: secondQuest,
-        [firstQuest1]: secondQuest1
-    },
+    expenses: {},
     optionalExpenses:{},
     income: [],
     savings: false,
 
 }
-<<<<<<< HEAD
-=======
-console.log(appData.expenses);
-alert("ваш бджет = " + money/30)
-0
->>>>>>> 0034db10e66334a8fe1cdacab62b2b00b50ef9d0
+
+for (let i = 0; i < 2; i++) {
+    var firstQuest = prompt("Введите обязательную статью расходов в этом месяце");
+    var secondQuest = prompt("Во сколько обойдется?");
+    
+    if ((typeof(firstQuest)) === 'string' && (typeof(firstQuest)) != null && (typeof(secondQuest)) != null
+        && secondQuest != '' && firstQuest != '' && firstQuest.length < 50) {
+            console.log('Correct')
+            appData.expenses[firstQuest] = secondQuest;
+        } else {
+            alert('Не хами мне');
+            --i;
+
+        }
+
+    
+    
+}
+alert("ваш бюджет = " + money / 30);
